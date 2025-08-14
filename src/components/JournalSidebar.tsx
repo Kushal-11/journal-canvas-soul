@@ -40,7 +40,7 @@ export function JournalSidebar({ pages, activePage, onPageSelect, onCreatePage }
       <div className="p-6 border-b border-border bg-gradient-warm">
         <div className="flex items-center gap-3 mb-4">
           <BookOpen className="h-6 w-6 text-journal-title" />
-          <h1 className="text-xl font-serif font-semibold text-journal-title">Journal</h1>
+          <h1 className="text-xl font-serif font-semibold text-journal-title">The Bright Side</h1>
         </div>
         
         <Button 
