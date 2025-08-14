@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, BookOpen } from "lucide-react";
+import { AIReflection } from "./AIReflection";
 
 interface JournalPage {
   id: string;
@@ -99,7 +100,7 @@ export function JournalEditor({ page, onUpdatePage }: JournalEditorProps) {
 
       {/* Editor */}
       <div className="flex-1 overflow-y-auto">
-        <div className="max-w-4xl mx-auto p-8">
+        <div className="max-w-4xl mx-auto p-8 space-y-8">
           {/* Title */}
           <textarea
             ref={titleRef}
@@ -109,7 +110,7 @@ export function JournalEditor({ page, onUpdatePage }: JournalEditorProps) {
               autoResize(e.target);
             }}
             placeholder="Untitled"
-            className="w-full text-4xl font-serif font-bold text-journal-title bg-transparent border-none outline-none resize-none placeholder:text-journal-placeholder mb-8 leading-tight"
+            className="w-full text-4xl font-serif font-bold text-journal-title bg-transparent border-none outline-none resize-none placeholder:text-journal-placeholder leading-tight"
             style={{ minHeight: '60px' }}
             onInput={(e) => autoResize(e.target as HTMLTextAreaElement)}
           />
@@ -123,10 +124,18 @@ export function JournalEditor({ page, onUpdatePage }: JournalEditorProps) {
               autoResize(e.target);
             }}
             placeholder="Start writing your thoughts..."
-            className="w-full text-lg text-journal-text bg-transparent border-none outline-none resize-none placeholder:text-journal-placeholder leading-relaxed font-serif"
+            className="w-full text-lg text-journal-text bg-transparent border-none outline-none resize-none placeholder:text-journal-placeholder leading-relaxed font-serif mb-8"
             style={{ minHeight: '400px' }}
             onInput={(e) => autoResize(e.target as HTMLTextAreaElement)}
           />
+
+          {/* AI Reflection Section */}
+          <div className="border-t border-border pt-8">
+            <AIReflection 
+              journalContent={content}
+              journalTitle={title || "Untitled"}
+            />
+          </div>
         </div>
       </div>
     </div>
