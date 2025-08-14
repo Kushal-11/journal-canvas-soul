@@ -61,7 +61,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				journal: {
+					sidebar: 'hsl(var(--journal-sidebar))',
+					'sidebar-hover': 'hsl(var(--journal-sidebar-hover))',
+					content: 'hsl(var(--journal-content))',
+					title: 'hsl(var(--journal-title))',
+					text: 'hsl(var(--journal-text))',
+					placeholder: 'hsl(var(--journal-placeholder))'
 				}
+			},
+			backgroundImage: {
+				'gradient-warm': 'var(--gradient-warm)',
+				'gradient-accent': 'var(--gradient-accent)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'warm': 'var(--shadow-warm)'
+			},
+			transitionProperty: {
+				'smooth': 'var(--transition-smooth)',
+				'quick': 'var(--transition-quick)'
+			},
+			fontFamily: {
+				'serif': ['Crimson Text', 'Georgia', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
